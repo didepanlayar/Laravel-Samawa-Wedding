@@ -1,0 +1,40 @@
+### Install Laravel and Dependencies
+
+# Laravel 11
+- composer create-project "laravel/laravel:^11.0" Samawa
+
+# Configure /etc/hosts for localhost
+
+# Create database
+- CREATE DATABASE database_name;
+- GRANT ALL PRIVILEGES ON database_name.* TO 'database_user'@'%';
+- FLUSH PRIVILEGES;
+
+# Configure .env with Docker-Server
+
+DB_CONNECTION=mysql
+DB_HOST=mysql (Docker Service)
+DB_PORT=3306
+DB_DATABASE=database_name
+DB_USERNAME=database_user
+DB_PASSWORD=database_secret
+
+SESSION_DRIVER=redis
+QUEUE_CONNECTION=redis
+CACHE_STORE=redis
+
+REDIS_HOST=redis (Docker Service)
+REDIS_PASSWORD=redis_secret
+REDIS_PORT=6379
+
+# Check database connection
+- php artisan db:monitor
+- php artisan migrate
+
+# Check redis connection
+- php artisan tinker
+> Cache::put('test', 'redis-works', 10);
+> Cache::get('test');
+Output: "redis-works"
+
+# Modify .gitignore and README.md
