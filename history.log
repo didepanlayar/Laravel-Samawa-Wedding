@@ -38,3 +38,15 @@ REDIS_PORT=6379
 Output: "redis-works"
 
 # Modify .gitignore and README.md
+
+### Models and Database Schema
+- php artisan make:mode City -m
+- php artisan make:mode WeddingOrganizer -m
+- php artisan make:mode WeddingPackage -m
+- php artisan make:mode BonusPackage -m
+- php artisan make:mode WeddingBonusPackage -m
+- php artisan make:mode WeddingPhoto -m
+- php artisan make:mode BookingTransaction -m
+- php artisan make:mode WeedingTestimonial -m
+# After modify Database Schema then migrate
+- php artisan migrate
