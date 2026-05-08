@@ -47,8 +47,27 @@ Output: "redis-works"
 - php artisan make:mode WeddingBonusPackage -m
 - php artisan make:mode WeddingPhoto -m
 - php artisan make:mode BookingTransaction -m
-- php artisan make:mode WeedingTestimonial -m
+- php artisan make:mode WeddingTestimonial -m
 # After modify Database Schema then migrate
 - php artisan migrate
 
 ### Mass assignment and relationship on Models
+
+### Filament - Content Management System
+- composer require filament/filament:"^3.3" -W
+- php artisan filament:install --panels
+# What is the ID? > admin
+# All done! Would you like to show some love by starring the Filament repo on GitHub? > No
+
+### Filament - Create User
+- php artisan make:filament-user
+# Input Name, Email and Password
+
+### Filament Resource
+- php artisan make:filament-resource City
+- php artisan make:filament-resource WeddingOrganizer
+- php artisan make:filament-resource WeddingPackage
+- php artisan make:filament-resource BonusPackage
+- php artisan make:filament-resource BookingTransaction
+- php artisan make:filament-resource WeddingTestimonial
+- php artisan storage:link
