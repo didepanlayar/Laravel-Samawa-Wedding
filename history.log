@@ -50,3 +50,5 @@ Output: "redis-works"
 - php artisan make:mode WeedingTestimonial -m
 # After modify Database Schema then migrate
 - php artisan migrate
+
+### Mass assignment and relationship on Models

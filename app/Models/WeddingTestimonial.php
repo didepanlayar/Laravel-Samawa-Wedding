@@ -7,22 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class WeddingBonusPackage extends Model
+class WeddingTestimonial extends Model
 {
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
+        'name',
+        'photo',
         'wedding_package_id',
-        'bonus_package_id',
+        'message',
+        'occupation',
     ];
 
     public function weddingPackage(): BelongsTo
     {
         return $this->belongsTo(WeddingPackage::class, 'wedding_package_id');
-    }
-
-    public function bonusPackage(): BelongsTo
-    {
-        return $this->belongsTo(WeddingPackage::class, 'bonus_package_id');
     }
 }
