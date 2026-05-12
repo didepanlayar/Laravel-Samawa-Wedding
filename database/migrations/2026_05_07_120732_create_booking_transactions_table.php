@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('booking_trx_id');
             $table->string('name');
             $table->string('phone');
-            $table->string('mail');
+            $table->string('email');
             $table->string('proof');
             $table->unsignedBigInteger('total_amount');
             $table->unsignedBigInteger('price');
