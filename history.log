@@ -82,3 +82,12 @@ Output: "redis-works"
 - php artisan make:resource Api/BookingTransactionResource
 - php artisan make:resource Api/WeddingTestimonialResource
 - php artisan make:resource Api/ViewBookingDetailsResource
+
+### API Controller
+- php artisan install:api
+- php artisan make:controller Api/CityController
+- php artisan make:controller Api/WeddingOrganizerController
+- php artisan make:controller Api/WeddingPackageController
+- php artisan make:controller Api/BookingTransactionController
+- php artisan make:controller Api/WeddingTestimonialController
+# Modify API Route
