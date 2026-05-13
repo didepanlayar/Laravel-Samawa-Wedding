@@ -71,3 +71,14 @@ Output: "redis-works"
 - php artisan make:filament-resource BookingTransaction
 - php artisan make:filament-resource WeddingTestimonial
 - php artisan storage:link
+
+### API JsonResource
+- php artisan make:resource Api/CityResource
+- php artisan make:resource Api/WeddingOrganizerResource
+- php artisan make:resource Api/WeddingPackageResource
+- php artisan make:resource Api/BonusPackageResource
+- php artisan make:resource Api/WeddingBonusPackageResource
+- php artisan make:resource Api/WeddingPhotoResource
+- php artisan make:resource Api/BookingTransactionResource
+- php artisan make:resource Api/WeddingTestimonialResource
+- php artisan make:resource Api/ViewBookingDetailsResource
