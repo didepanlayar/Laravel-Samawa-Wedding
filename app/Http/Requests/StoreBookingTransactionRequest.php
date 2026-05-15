@@ -30,7 +30,7 @@ class StoreBookingTransactionRequest extends FormRequest
             'total_amount' => 'required|integer',
             'total_tax_amount' => 'required|integer',
             'price' => 'required|integer',
-            'proof' => 'required|file|mimes:png,jpg,jpeg|max:2048',
+            'proof' => 'required|file|mimes:png,jpg,jpeg,webp|max:2048',
         ];
     }
 }

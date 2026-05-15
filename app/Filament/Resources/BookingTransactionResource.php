@@ -98,6 +98,8 @@ class BookingTransactionResource extends Resource
                         ->schema([
                             TextInput::make('booking_trx_id')
                                 ->label('Booking ID')
+                                ->default(fn () => BookingTransaction::generateUniqueTrxId())
+                                ->readOnly()
                                 ->required()
                                 ->maxLength(255),
                             ToggleButtons::make('is_paid')
