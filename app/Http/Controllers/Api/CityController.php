@@ -18,8 +18,13 @@ class CityController extends Controller
 
     public function show(City $city)
     {
-        $city->load(['weddingPackages.city', 'weddingPackages.photos']);
         $city->loadCount('weddingPackages');
+        $city->load([
+            'weddingPackages.photos',
+            'weddingPackages.city' => function ($query) {
+                $query->withCount('weddingPackages');
+            },
+        ]);
 
         return new CityResource($city);
     }

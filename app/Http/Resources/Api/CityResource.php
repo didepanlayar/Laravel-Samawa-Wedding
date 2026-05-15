@@ -19,8 +19,8 @@ class CityResource extends JsonResource
             'name' => $this->name,
             'slug' => $this->slug,
             'icon' => $this->icon,
-            'weddingPackage_count' => $this->wedding_package_count,
-            'weddingPackagaes' => WeddingPackageResource::collection($this->whenLoaded('weddingPackages')),
+            'wedding_package_count' => $this->wedding_packages_count,
+            'wedding_packages' => WeddingPackageResource::collection($this->whenLoaded('weddingPackages')),
         ];
     }
 }

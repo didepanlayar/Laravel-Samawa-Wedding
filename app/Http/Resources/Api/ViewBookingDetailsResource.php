@@ -24,7 +24,7 @@ class ViewBookingDetailsResource extends JsonResource
             'is_paid' => $this->is_paid,
             'total_amount' => $this->total_amount,
             'started_at' => $this->started_at,
-            'weddingPackage' => new WeddingPackageResource($this->whenLoaded('weddingPackage')),
+            'wedding_package' => new WeddingPackageResource($this->whenLoaded('weddingPackage')),
         ];
     }
 }

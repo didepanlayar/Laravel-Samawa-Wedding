@@ -19,7 +19,7 @@ class WeddingOrganizerController extends Controller
     public function show(WeddingOrganizer $weddingOrganizer)
     {
         $weddingOrganizer->load([
-            'weddingPackages.photo',
+            'weddingPackages.photos',
             'weddingPackages.weddingOrganizer' => function ($query) {
                 $query->withCount('weddingPackages');
             }

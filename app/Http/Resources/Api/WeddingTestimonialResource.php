@@ -20,7 +20,7 @@ class WeddingTestimonialResource extends JsonResource
             'occupation' => $this->occupation,
             'photo' => $this->photo,
             'message' => $this->message,
-            'weddingPackage' => new WeddingPackageResource($this->whenLoaded('weddingPackage')),
+            'wedding_package' => new WeddingPackageResource($this->whenLoaded('weddingPackage')),
         ];
     }
 }

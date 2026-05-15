@@ -27,7 +27,7 @@ class BookingTransactionResource extends JsonResource
             'total_tax_amount' => $this->total_tax_amount,
             'started_at' => $this->started_at,
             'wedding_package_id' => $this->wedding_package_id,
-            'weddingPackage' => new WeddingPackageResource($this->whenLoaded('weddingPackage')),
+            'wedding_package' => new WeddingPackageResource($this->whenLoaded('weddingPackage')),
         ];
     }
 }

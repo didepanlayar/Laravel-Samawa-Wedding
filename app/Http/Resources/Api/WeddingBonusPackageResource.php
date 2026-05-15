@@ -16,7 +16,7 @@ class WeddingBonusPackageResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'bonusPackage' => new BonusPackageResource($this->whenLoaded('bonusPackage')),
+            'bonus_package' => new BonusPackageResource($this->whenLoaded('bonusPackage')),
         ];
     }
 }

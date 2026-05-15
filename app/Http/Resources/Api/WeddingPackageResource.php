@@ -19,14 +19,14 @@ class WeddingPackageResource extends JsonResource
             'name' => $this->name,
             'slug' => $this->slug,
             'price' => $this->price,
-            'isPopular' => $this->is_popular,
+            'is_popular' => $this->is_popular,
             'thumbnail' => $this->thumbnail,
             'about' => $this->about,
             'city' => new CityResource($this->whenLoaded('city')),
-            'weddingOrganizer' => new WeddingOrganizerResource($this->whenLoaded('weddingOrganizer')),
+            'wedding_organizer' => new WeddingOrganizerResource($this->whenLoaded('weddingOrganizer')),
             'photos' => WeddingPhotoResource::collection($this->whenLoaded('photos')),
-            'weddingBonusPackages' => WeddingBonusPackageResource::collection($this->whenLoaded('weddingBonusPackages')),
-            'weddingTestimonials' => WeddingTestimonialResource::collection($this->whenLoaded('weddingTestimonials')),
+            'wedding_bonus_packages' => WeddingBonusPackageResource::collection($this->whenLoaded('weddingBonusPackages')),
+            'wedding_testimonials' => WeddingTestimonialResource::collection($this->whenLoaded('weddingTestimonials')),
         ];
     }
 }
