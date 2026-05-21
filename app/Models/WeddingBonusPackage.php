@@ -23,6 +23,6 @@ class WeddingBonusPackage extends Model
 
     public function bonusPackage(): BelongsTo
     {
-        return $this->belongsTo(WeddingPackage::class, 'bonus_package_id');
+        return $this->belongsTo(BonusPackage::class, 'bonus_package_id');
     }
 }
